@@ -1,6 +1,6 @@
 import os
 
 class Config:
-    DEBUG = True
-    SECRET_KEY = 'dev'
+    DEBUG = False
+    SECRET_KEY = os.environ.get('SECRET_KEY', 'dev-key-change-in-production')
     DATABASE = os.path.join('instance', 'database.db')
